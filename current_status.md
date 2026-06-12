@@ -19,11 +19,20 @@
 - **문서 4종** 작성: PRD.md, CLAUDE.md, README.md, current_status.md
 - **기능 범위 확정**: v1 = 현재 + A(습관) + 잔디 + 한 줄 모아보기
 
+- **Day 1 완료** — 파일 분리 + localStorage 영속성 + 설정 모달
+- **Day 3 완료** — 잔디 히트맵 + 5분 비상 모드 + 저녁 리마인더 + PWA
+- **Day 4 완료** — 한 줄 모아보기 + 마이크로 인터랙션 + Vercel 배포
+  - URL: https://chaekjang-nine.vercel.app
+  - `index.html` / `css/style.css` / `js/app.js` 3파일로 분리 (reading.html은 백업 유지)
+  - localStorage 영속성: 새로고침해도 책·스트릭·설정 유지, 날짜 바뀌면 todayMin 자동 초기화
+  - 타이머 분 설정 모달: prompt() 제거 → 5/10/20/30분 프리셋 + 직접 입력 모달로 교체
+  - 설정 모달(⚙): 카카오 REST API 키 입력 → localStorage 저장, 언제든 변경 가능
+
 ---
 
 ## [진행 중 작업]
 
-- 없음 (로컬 프로토타입 + 문서 마일스톤 종료)
+- 없음 (Day 1 완료)
 
 ---
 
@@ -31,13 +40,16 @@
 
 우선순위 순:
 
-1. **표지 검색 카카오 연결** — KAKAO_KEY 입력, 한국 책 표지 정확도 시연
-2. **Supabase 연동** — Auth + 4개 테이블(books/quotes/reading_logs/settings) + RLS
-   - 로컬 `state` 메모리 → Supabase 호출로 교체 (교육 클라이맥스)
-3. **독서 잔디(히트맵)** — 1년 캘린더, reading_logs 기반
-4. **저녁 리마인더 + PWA** — manifest, service worker, 알림 권한
-5. **한 줄 모아보기 (필사 노트 뷰)** + **5분 비상 모드**
-6. 마이크로 인터랙션 다듬기
+1. ~~**표지 검색 카카오 연결**~~ ✅ Day 1에 완료 (설정 모달에서 키 입력)
+2. ~~**Supabase 연동**~~ → 보류 (사용자 결정)
+1. ~~**독서 잔디(히트맵)**~~ ✅ 완료
+2. ~~**저녁 리마인더 + PWA**~~ ✅ 완료
+3. ~~**5분 비상 모드**~~ ✅ 완료
+~~4. **한 줄 모아보기**~~ ✅ 완료
+~~5. **마이크로 인터랙션**~~ ✅ 완료
+~~6. **Vercel 배포**~~ ✅ 완료 → https://chaekjang-nine.vercel.app
+
+**v1 전체 완료. 다음은 v2 기능 또는 Supabase 연동 시 진행.**
 
 ---
 
